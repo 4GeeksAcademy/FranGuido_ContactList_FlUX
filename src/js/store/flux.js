@@ -60,11 +60,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 				// Deleting contact
-
-
-
-
-
+				deleteContact: (contact) =>{
+					// Get from store
+					let contactList = getStore().contacts;
+					// Keep all except current id
+					setStore({contacts: contactList.filter((item) => item !== contact)})
+					getActions().closeDeleteModal();
+				},
 
 				// Checking filled form fields when adding or editing
 				// Modal as alert
