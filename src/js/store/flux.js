@@ -33,8 +33,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 			contactToBeDeleted: null,
 			showModal: false,
 		},
-		
+
 		actions: {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			// ACTIONS BELOW ARE FOR BOILERPLATE DEMO
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
