@@ -11,15 +11,15 @@ export const ContactCard = () => {
 
     // Delete contact functionality
     const handleDeleteClick = (contact) => {
-        actions.contactDeleted(contact);
+        actions.deleteContact(contact);
         actions.toggleModal(true);
     }
 
     return (
 
         <>
-            {store.contacts.map((contact) =>
-                <div className="card mb-3 mt-4">
+            {store.contacts.map((contact, id) =>
+                <div className="card mb-3 mt-4" key={id}>
                     <div className="row g-0">
                         <div className="imageDiv col-md-2">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" className="img-fluid rounded-circle" alt="..."></img>

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Context } from 'react';
+import { Context } from '../store/appContext';
 import { Modal } from '../component/Modal';
 
 export const AddContact = () => {
@@ -21,11 +21,9 @@ export const AddContact = () => {
     const handleSubmit = (e) => {
         // Prevent refreshing after submit
         e.preventDefault();
-        // Required fields alert
-        if (this.name === "" && this.email === "") {
-            alert("You must provide at least a Name and an Email.");
-            return;
-        }
+        actions.checkFormFields(newContact);
+
+        
         // Clear input fields after submit
         setNewContact({
             name: "",

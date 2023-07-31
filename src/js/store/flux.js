@@ -41,7 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					// Get from store
 					let contactList = getStore().contacts;
 					const newContact = {id: contactList.length +1, ...contact};
-					// Adds one more contacto to the list
+					// Adds one more contact to the list
 					setStore({ contacts: [...contactList, newContact]});
 				},
 
@@ -74,7 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ showModal: show})
 				},
 
-				checkEmptyFields: (newContact) =>{
+				checkFormFields: (newContact) =>{
 					const {name, email, phone, address} = newContact
 					if (name && email && phone && address) {
 						getActions().addContact(newContact);
