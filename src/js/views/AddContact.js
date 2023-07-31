@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from 'react';
-//AQUI IMPORTA COMPONENTE MODAL
+import { Modal } from '../component/Modal';
 
 export const AddContact = () => {
 
@@ -74,7 +74,7 @@ export const AddContact = () => {
 
                 </form>
 
- // ACA SE INSERTA UN MODAL 
+                <Modal/>
 
             </div>
         </>

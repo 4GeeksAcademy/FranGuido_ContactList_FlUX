@@ -30,7 +30,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 
-			contactToBeDeleted: null,
+			contactDeleted: null,
 			showModal: false,
 		},
 
@@ -81,7 +81,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 					else{getActions().toggleModal(true)}
 				},
-				closeModal: () => {setStore({showModal: false})},
+				shutModal: () => {setStore({showModal: false})},
 
 
 

@@ -11,7 +11,7 @@ export const ContactCard = () => {
 
     // Delete contact functionality
     const handleDeleteClick = (contact) => {
-        actions.setContactToBeDeleted(contact);
+        actions.contactDeleted(contact);
         actions.toggleModal(true);
     }
 
