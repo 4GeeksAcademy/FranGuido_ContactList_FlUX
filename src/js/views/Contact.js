@@ -14,7 +14,7 @@ export const Contact = () => {
     <div className="container">
       <div>
         <Link to="/add">
-        <button className="btn btn-success">Add a New Contact</button>
+        <button className="newContactButton btn">Add a New Contact</button>
         </Link>
       </div>
       <div> <ContactCard/> </div>

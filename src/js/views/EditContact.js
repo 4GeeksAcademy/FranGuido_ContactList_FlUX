@@ -34,27 +34,27 @@ export const EditContact = () => {
                 <form onSubmit={handleSubmit}>
 
                     <div className='mb-3'>
-                        <h2 className='formHeader mt-1'>Add a new contact</h2>
+                        <h2 className='formHeader mt-1'>Edit contact</h2>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Full name</label>
-                        <input name="name" type="text" class="form-control" placeholder='Jane Doe' value={newContact.name} onChange={(e) => setNewContact({ ...newContact, name: e.target.value })} ></input>
+                        <input name="name" type="text" class="form-control" placeholder='Jane Doe' value={editedContact.name} onChange={(e) => setEditedContact({ ...editedContact, name: e.target.value })} ></input>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Email</label>
-                        <input name="email" type="email" class="form-control" placeholder='user@email.com' value={newContact.email} onChange={(e) => setNewContact({ ...newContact, email: e.target.value })} ></input>
+                        <input name="email" type="email" class="form-control" placeholder='user@email.com' value={editedContact.email} onChange={(e) => setEditedContact({ ...editedContact, email: e.target.value })} ></input>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Phone number</label>
-                        <input name="phone" type="text" class="form-control" placeholder='5555-5555' value={newContact.phone} onChange={(e) => setNewContact({ ...newContact, phone: e.target.value })} ></input>
+                        <input name="phone" type="text" class="form-control" placeholder='5555-5555' value={newContact.phone} onChange={(e) => setEditedContact({ ...editedContact, phone: e.target.value })} ></input>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Address</label>
-                        <input name="address" type="text" class="form-control" placeholder='Street, City, Country.' value={newContact.address} onChange={(e) => setNewContact({ ...newContact, address: e.target.value })}></input>
+                        <input name="address" type="text" class="form-control" placeholder='Street, City, Country.' value={newContact.address} onChange={(e) => setEditedContact({ ...editedContact, address: e.target.value })}></input>
                     </div>
 
                     <Link to="/">
