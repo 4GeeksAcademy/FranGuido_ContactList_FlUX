@@ -12,8 +12,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			contacts: [
+				{
+					id: 1,
+					name: "Ana García S.",
+					email: "ana@email.com",
+					phone: "5555-5555",
+					address: "Nosara, Guanacaste"
+				},
+				{
+					id :2,
+					name: "Daniel Mendoza Q.",
+					email: "daniel@email.com",
+					phone: "6666-6666",
+					address: "Cahuita, Limón"
+				}
+			],
+
+			contactToBeDeleted: null,
+			showModal: false,
 		},
+		
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
