@@ -10,6 +10,7 @@ body{
 }
 .container{
     background: linear-gradient(45deg, rgba(2,115,94,1) 25%, rgba(163,191,63,1) 78%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 50%;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;

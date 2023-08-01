@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Context } from '../store/appContext';
 import { Link, useParams } from 'react-router-dom';
-import { ConfirmModal } from './ConfirmModal';
+
 
 export const ContactCard = () => {
 
@@ -12,7 +12,7 @@ export const ContactCard = () => {
     // Delete contact functionality
     const handleDeleteClick = (contact) => {
         actions.deleteContact(contact);
-        actions.toggleModal(true);
+        
     }
 
     return (
@@ -43,8 +43,6 @@ export const ContactCard = () => {
 
             )
             };
-
-            <ConfirmModal />
 
         </>
     )
