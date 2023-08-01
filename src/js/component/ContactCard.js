@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Context } from '../store/appContext';
 import { Link, useParams } from 'react-router-dom';
-// AQUI IMPORTA MODAL
+import { ConfirmModal } from './ConfirmModal';
 
 export const ContactCard = () => {
 
@@ -27,9 +27,9 @@ export const ContactCard = () => {
                         <div className="cardContent col-md">
                             <div className="card-body">
                                 <h6 className="card-title"><b>{contact.name}</b></h6>
-                                <p className="card-text"> <b>Email: </b> {contact.email}</p>
-                                <p className="card-text"> <b>Phone number: </b> {contact.phone}</p>
-                                <p className="card-text"> <b>Address: </b> {contact.address}</p>
+                                <p className="card-text"> <i className='fas fa-envelope-open'> </i>  {contact.email}</p>
+                                <p className="card-text"> <i className='fas fa-mobile-alt'> </i> {contact.phone} </p>
+                                <p className="card-text"> <i className='fas fa-address-book'> </i> {contact.address}</p>
                             </div>
                         </div>
                         <div className="buttonsSection col-md-1">
@@ -42,11 +42,11 @@ export const ContactCard = () => {
                 </div>
 
             )
-        };
+            };
+
+            <ConfirmModal />
 
         </>
-        // AQUI LLAMA MODAL DE BORRAR
-
     )
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../store/appContext';
-import { Modal } from '../component/Modal';
+
 
 export const AddContact = () => {
 
@@ -45,34 +45,34 @@ export const AddContact = () => {
 
                     <div className="mb-3">
                         <label className="form-label">Full name</label>
-                        <input name="name" type="text" class="form-control" placeholder='Jane Doe' value={newContact.name} onChange={(e) => setNewContact({...newContact, name: e.target.value}) } ></input>
+                        <input name="name" type="text" class="form-control" placeholder='Jane Doe' value={newContact.name} onChange={(e) => setNewContact({...newContact, name: e.target.value})} required></input>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Email</label>
-                        <input name="email" type="email" class="form-control" placeholder='user@email.com' value={newContact.email} onChange={(e) => setNewContact({...newContact, email: e.target.value}) } ></input>
+                        <input name="email" type="email" class="form-control" placeholder='user@email.com' value={newContact.email} onChange={(e) => setNewContact({...newContact, email: e.target.value})} required ></input>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Phone number</label>
-                        <input name="phone" type="text" class="form-control" placeholder='5555-5555' value={newContact.phone} onChange={(e) => setNewContact({...newContact, phone: e.target.value}) } ></input>
+                        <input name="phone" type="text" class="form-control" placeholder='5555-5555' value={newContact.phone} onChange={(e) => setNewContact({...newContact, phone: e.target.value})} required></input>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Address</label>
-                        <input name="address" type="text" class="form-control" placeholder='Street, City, Country.' value={newContact.address} onChange={(e) => setNewContact({...newContact, address: e.target.value}) }></input>
+                        <input name="address" type="text" class="form-control" placeholder='Street, City, Country.' value={newContact.address} onChange={(e) => setNewContact({...newContact, address: e.target.value}) } required></input>
                     </div>
 
                     <Link to="/">
-                        <button type="submit" class="formCancelButton btn">Cancel</button>
+                        <button type="submit" class="formCancelButton btn">Back to list</button>
                     </Link>
 
-
+                    
                     <button type="submit" class="formAddButton btn">Save contact</button>
+                    
 
                 </form>
 
-                <Modal/>
 
             </div>
         </>

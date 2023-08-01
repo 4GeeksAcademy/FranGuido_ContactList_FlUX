@@ -45,6 +45,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ contacts: [...contactList, newContact]});
 				},
 
+			
+
 				// Editing contact from the list
 				editContact: (id, editedContact) =>{
 					// Get from store
@@ -68,20 +70,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 					getActions().closeDeleteModal();
 				},
 
-				// Checking filled form fields when adding or editing
-				// Modal as alert
+				
+				// Modal as alert 
 				toggleModal: (show) =>{
 					setStore({ showModal: show})
 				},
 
+				// Check empty fields in input form when adding
 				checkFormFields: (newContact) =>{
 					const {name, email, phone, address} = newContact
 					if (name && email && phone && address) {
 						getActions().addContact(newContact);
 					}
-					else{getActions().toggleModal(true)}
 				},
-				shutModal: () => {setStore({showModal: false})},
+
+				// Closing
+				closeModal: () => {
+					setStore({ showModal: false });
+				},
+
+				closeDeleteModal: () => {
+					setStore({ showModal: false, contactDeleted: null });
+				},
+
+				
 
 
 

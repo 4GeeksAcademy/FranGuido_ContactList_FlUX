@@ -9,10 +9,10 @@ export const EditContact = () => {
 
     const { store, actions } = useContext(Context)
     const { id } = useParams()
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     // Update state of edited contact
-
+    // Get by id
     const [editedContact, setEditedContact] = useState({
         name: store.contacts[id - 1].name,
         email: store.contacts[id - 1].email,
@@ -50,16 +50,16 @@ export const EditContact = () => {
 
                     <div className="mb-3">
                         <label className="form-label">Phone number</label>
-                        <input name="phone" type="text" class="form-control" placeholder='5555-5555' value={newContact.phone} onChange={(e) => setEditedContact({ ...editedContact, phone: e.target.value })} ></input>
+                        <input name="phone" type="text" class="form-control" placeholder='5555-5555' value={editedContact.phone} onChange={(e) => setEditedContact({ ...editedContact, phone: e.target.value })} ></input>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Address</label>
-                        <input name="address" type="text" class="form-control" placeholder='Street, City, Country.' value={newContact.address} onChange={(e) => setEditedContact({ ...editedContact, address: e.target.value })}></input>
+                        <input name="address" type="text" class="form-control" placeholder='Street, City, Country.' value={editedContact.address} onChange={(e) => setEditedContact({ ...editedContact, address: e.target.value })}></input>
                     </div>
 
                     <Link to="/">
-                        <button type="submit" class="formCancelButton btn">Cancel</button>
+                        <button type="submit" class="formCancelButton btn">Back to list</button>
                     </Link>
 
 
